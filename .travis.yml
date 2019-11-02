@@ -1,0 +1,22 @@
+language: cpp
+compiler: gcc
+dist: bionic
+
+# The available apt packages can be found here:
+# https://packages.ubuntu.com/bionic/allpackages
+addons:
+  apt:
+    packages:
+      - libpetsc3.7-dev
+      - libgsl23
+
+script:
+ - pwd
+ - env
+ - ls /usr/lib
+ - ls /usr/lib/petscdir
+ - which mpicc
+ - which mpif90
+ - which gfortran
+
+# - ./tests/travis.sh
